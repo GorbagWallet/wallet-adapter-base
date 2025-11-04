@@ -1,6 +1,6 @@
 {
     "name": "@gorbag/wallet-adapter-base",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "author": "David Nzube (Skipp)",
     "repository": {
         "type": "git",
@@ -29,17 +29,19 @@
         "types": "./lib/types/index.d.ts"
     },
     "scripts": {
-        "build": "tsc --build --verbose && pnpm run package",
+        "build": "tsc --build --verbose && npm run package",
         "clean": "shx mkdir -p lib && shx rm -rf lib",
         "lint": "prettier --check 'src/{*,**/*}.{ts,tsx,js,jsx,json}' && eslint",
         "package": "shx mkdir -p lib/cjs && shx echo '{ \"type\": \"commonjs\" }' > lib/cjs/package.json"
+    },
+    "dependencies": {
+        "eventemitter3": "^5.0.0"
     },
     "peerDependencies": {
         "@solana/web3.js": "^1.98.0"
     },
     "devDependencies": {
         "@solana/web3.js": "^1.98.2",
-        "eventemitter3": "^5.0.0",
         "shx": "^0.4.0",
         "typescript": "^5.0.0"
     }
