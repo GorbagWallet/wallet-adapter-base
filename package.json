@@ -37,11 +37,11 @@
     "dependencies": {
         "eventemitter3": "^5.0.0"
     },
-    "peerDependencies": {
-        "@solana/web3.js": "^1.98.0"
+    "dependencies": {
+        "@solana/web3.js": "^1.98.0",
+        "eventemitter3": "^5.0.0"
     },
     "devDependencies": {
-        "@solana/web3.js": "^1.98.2",
         "shx": "^0.4.0",
         "typescript": "^5.0.0"
     }

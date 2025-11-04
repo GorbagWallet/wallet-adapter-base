@@ -99,6 +99,12 @@ export abstract class BaseWalletAdapter<Name extends string = string>
     ): Promise<TransactionSignature>;
 }
 
+export function isVersionedTransaction(
+    transaction: Transaction | VersionedTransaction
+): transaction is VersionedTransaction {
+    return 'version' in transaction;
+}
+
 export function scopePollingDetectionStrategy(detect: () => boolean): void {
     // Early return when server-side rendering
     if (typeof window === 'undefined' || typeof document === 'undefined') return;
