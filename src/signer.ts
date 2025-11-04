@@ -1,6 +1,6 @@
 import type { Connection, SendOptions, Transaction, TransactionSignature, VersionedTransaction } from '@solana/web3.js';
-import { BaseWalletAdapter, isVersionedTransaction } from './adapter';
-import { TransactionOrVersionedTransaction } from './transaction';
+import { BaseWalletAdapter } from './adapter';
+import { isVersionedTransaction, TransactionOrVersionedTransaction } from './transaction';
 
 export abstract class BaseMessageSignerWalletAdapter<Name extends string = string> extends BaseWalletAdapter<Name> {
     abstract signTransaction<T extends Transaction | VersionedTransaction>(transaction: T): Promise<T>;

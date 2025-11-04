@@ -35,9 +35,6 @@
         "package": "shx mkdir -p lib/cjs && shx echo '{ \"type\": \"commonjs\" }' > lib/cjs/package.json"
     },
     "dependencies": {
-        "eventemitter3": "^5.0.0"
-    },
-    "dependencies": {
         "@solana/web3.js": "^1.98.0",
         "eventemitter3": "^5.0.0"
     },
