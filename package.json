@@ -1,6 +1,6 @@
 {
     "name": "@gorbag/wallet-adapter-base",
-    "version": "1.0.8",
+    "version": "1.0.9",
     "author": "David Nzube (Skipp)",
     "repository": {
         "type": "git",
@@ -11,8 +11,8 @@
         "access": "public"
     },
     "files": [
-        "lib",
-        "src",
+        "lib/",
+        "src/",
         "LICENSE"
     ],
     "engines": {
@@ -37,9 +37,10 @@
         }
     },
     "scripts": {
-        "build": "npm run build:esm && npm run build:cjs",
+        "build": "npm run build:esm && npm run build:cjs && npm run postbuild",
         "build:esm": "tsc --module es2020 --outDir lib/esm --target es2020",
         "build:cjs": "tsc --module commonjs --outDir lib/cjs --target es2017",
+        "postbuild": "node add-js-extensions.js",
         "clean": "shx mkdir -p lib && shx rm -rf lib",
         "lint": "prettier --check 'src/{*,**/*}.{ts,tsx,js,jsx,json}' && eslint",
         "package": "shx mkdir -p lib/cjs && shx echo '{ \"type\": \"commonjs\" }' > lib/cjs/package.json"
@@ -54,3 +55,4 @@
         "typescript": "^5.9.3"
     }
 }
+"
