@@ -1,6 +1,6 @@
 {
     "name": "@gorbag/wallet-adapter-base",
-    "version": "1.0.5",
+    "version": "1.0.7",
     "author": "David Nzube (Skipp)",
     "repository": {
         "type": "git",
