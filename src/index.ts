@@ -1,20 +1,22 @@
 // Export all from adapter except isVersionedTransaction to avoid conflicts
-export * from './adapter.js';
-export * from './signer.js';
-export * from './errors.js';
+export * from './adapter';
+export * from './signer';
+export * from './errors';
 
 // Import and export transaction-related types and functions explicitly
-import { 
+import type { 
     TransactionVersion, 
     SupportedTransactionVersions, 
-    TransactionOrVersionedTransaction, 
+    TransactionOrVersionedTransaction 
+} from './transaction';
+import { 
     isVersionedTransaction 
-} from './transaction.js';
+} from './transaction';
 
 // Re-export to make them available at the package root
 export { 
-    TransactionVersion, 
-    SupportedTransactionVersions, 
-    TransactionOrVersionedTransaction, 
+    type TransactionVersion, 
+    type SupportedTransactionVersions, 
+    type TransactionOrVersionedTransaction, 
     isVersionedTransaction 
 };
